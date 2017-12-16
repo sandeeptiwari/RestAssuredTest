@@ -1,5 +1,3 @@
-# RestAssuredTest
-
 If you want to run your test on the basis of specific group
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -23,4 +21,4 @@ If you want to run your test on the basis of specific group
 </suite>
 
 run maven command
-# mvn clean test -DsuiteXmlFile=dynamic_groups.xml -DgroupToRun=group2
+mvn clean test -DsuiteXmlFile=dynamic_groups.xml -DgroupToRun=group2

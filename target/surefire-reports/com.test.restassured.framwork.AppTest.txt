@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.test.restassured.framwork.AppTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.062 sec <<< FAILURE!
+testRegisterUserApiResponseJsonSchemaValidation(com.test.restassured.framwork.AppTest)  Time elapsed: 0.874 sec  <<< FAILURE!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at io.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:270)
+	at io.restassured.module.jsv.JsonSchemaValidator.access$300(JsonSchemaValidator.java:75)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:281)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
+	at com.test.restassured.framwork.AppTest.testRegisterUserApiResponseJsonSchemaValidation(AppTest.java:59)
+

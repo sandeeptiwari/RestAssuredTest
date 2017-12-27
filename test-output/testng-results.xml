@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2017-12-16T07:13:16Z" name="Suite" finished-at="2017-12-16T07:13:20Z" duration-ms="4113">
+  <suite started-at="2017-12-27T01:10:48Z" name="Suite" finished-at="2017-12-27T01:10:57Z" duration-ms="9073">
     <groups>
-      <group name="register">
-        <method signature="AppTest.testRegisterUserApiContainsToke()[pri:0, instance:com.test.restassured.framwork.AppTest@4009e306]" name="testRegisterUserApiContainsToke" class="com.test.restassured.framwork.AppTest"/>
-        <method signature="AppTest.testRegisterUserApiStatusCode()[pri:0, instance:com.test.restassured.framwork.AppTest@4009e306]" name="testRegisterUserApiStatusCode" class="com.test.restassured.framwork.AppTest"/>
-      </group> <!-- register -->
+      <group name="login">
+        <method signature="LoginTest.testFetchUsers()[pri:0, instance:com.test.restassured.framwork.LoginTest@23348b5d]" name="testFetchUsers" class="com.test.restassured.framwork.LoginTest"/>
+        <method signature="LoginTest.testHasItems()[pri:0, instance:com.test.restassured.framwork.LoginTest@23348b5d]" name="testHasItems" class="com.test.restassured.framwork.LoginTest"/>
+        <method signature="LoginTest.testLoginSuccessful()[pri:0, instance:com.test.restassured.framwork.LoginTest@23348b5d]" name="testLoginSuccessful" class="com.test.restassured.framwork.LoginTest"/>
+      </group> <!-- login -->
     </groups>
-    <test started-at="2017-12-16T07:13:16Z" name="Test" finished-at="2017-12-16T07:13:20Z" duration-ms="4113">
-      <class name="com.test.restassured.framwork.AppTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.restassured.framwork.AppTest@4009e306]" started-at="2017-12-16T12:43:16Z" name="setUp" finished-at="2017-12-16T12:43:16Z" duration-ms="368" status="PASS">
+    <test started-at="2017-12-27T01:10:48Z" name="Test" finished-at="2017-12-27T01:10:57Z" duration-ms="9073">
+      <class name="com.test.restassured.framwork.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.restassured.framwork.LoginTest@23348b5d]" started-at="2017-12-27T06:40:47Z" name="setUp" finished-at="2017-12-27T06:40:48Z" duration-ms="514" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpBeforeTest()[pri:0, instance:com.test.restassured.framwork.AppTest@4009e306]" started-at="2017-12-16T12:43:16Z" name="setUpBeforeTest" finished-at="2017-12-16T12:43:16Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeTest()[pri:0, instance:com.test.restassured.framwork.LoginTest@23348b5d]" started-at="2017-12-27T06:40:48Z" name="setUpBeforeTest" finished-at="2017-12-27T06:40:48Z" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeTest -->
-        <test-method signature="testRegisterUserApiStatusCode()[pri:0, instance:com.test.restassured.framwork.AppTest@4009e306]" started-at="2017-12-16T12:43:16Z" name="testRegisterUserApiStatusCode" finished-at="2017-12-16T12:43:19Z" duration-ms="2397" status="PASS">
+        <test-method signature="testFetchUsers()[pri:0, instance:com.test.restassured.framwork.LoginTest@23348b5d]" started-at="2017-12-27T06:40:48Z" name="testFetchUsers" finished-at="2017-12-27T06:40:53Z" duration-ms="5191" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRegisterUserApiStatusCode -->
-        <test-method signature="testRegisterUserApiContainsToke()[pri:0, instance:com.test.restassured.framwork.AppTest@4009e306]" started-at="2017-12-16T12:43:19Z" name="testRegisterUserApiContainsToke" finished-at="2017-12-16T12:43:20Z" duration-ms="1697" status="PASS">
+        </test-method> <!-- testFetchUsers -->
+        <test-method signature="testHasItems()[pri:0, instance:com.test.restassured.framwork.LoginTest@23348b5d]" started-at="2017-12-27T06:40:53Z" name="testHasItems" finished-at="2017-12-27T06:40:56Z" duration-ms="2407" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRegisterUserApiContainsToke -->
-      </class> <!-- com.test.restassured.framwork.AppTest -->
+        </test-method> <!-- testHasItems -->
+        <test-method signature="testLoginSuccessful()[pri:0, instance:com.test.restassured.framwork.LoginTest@23348b5d]" started-at="2017-12-27T06:40:56Z" name="testLoginSuccessful" finished-at="2017-12-27T06:40:57Z" duration-ms="1445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSuccessful -->
+      </class> <!-- com.test.restassured.framwork.LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

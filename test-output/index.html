@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\selenium\RestAssuredTest\testng.xml</span>
+                    <span>D:\selenium\RestAssuredTest\testng_login.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.test.restassured.framwork.AppTest" class="method navigator-link" hash-for-method="testRegisterUserApiContainsToke">testRegisterUserApiContainsToke</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.test.restassured.framwork.LoginTest" class="method navigator-link" hash-for-method="testFetchUsers">testFetchUsers</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.test.restassured.framwork.AppTest" class="method navigator-link" hash-for-method="testRegisterUserApiStatusCode">testRegisterUserApiStatusCode</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.test.restassured.framwork.LoginTest" class="method navigator-link" hash-for-method="testHasItems">testHasItems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.restassured.framwork.LoginTest" class="method navigator-link" hash-for-method="testLoginSuccessful">testLoginSuccessful</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -124,21 +129,28 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.test.restassured.framwork.AppTest</span>
+              <span class="class-name">com.test.restassured.framwork.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testRegisterUserApiContainsToke">
-                  </a> <!-- testRegisterUserApiContainsToke -->
-                  <span class="method-name">testRegisterUserApiContainsToke</span>
+                  <a name="testFetchUsers">
+                  </a> <!-- testFetchUsers -->
+                  <span class="method-name">testFetchUsers</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testRegisterUserApiStatusCode">
-                  </a> <!-- testRegisterUserApiStatusCode -->
-                  <span class="method-name">testRegisterUserApiStatusCode</span>
+                  <a name="testHasItems">
+                  </a> <!-- testHasItems -->
+                  <span class="method-name">testHasItems</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginSuccessful">
+                  </a> <!-- testLoginSuccessful -->
+                  <span class="method-name">testLoginSuccessful</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,7 +158,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\selenium\RestAssuredTest\testng.xml</span>
+            <span class="header-content">D:\selenium\RestAssuredTest\testng_login.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -156,11 +168,11 @@
   &lt;test name=&quot;Test&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;register&quot;/&gt;
+        &lt;include name=&quot;login&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.test.restassured.framwork.AppTest&quot;/&gt;
+      &lt;class name=&quot;com.test.restassured.framwork.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -185,14 +197,18 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">register</span>
+              <span class="test-group-name">login</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testRegisterUserApiContainsToke</span>
+                <span class="method-in-group-name">testFetchUsers</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">testRegisterUserApiStatusCode</span>
+                <span class="method-in-group-name">testHasItems</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testLoginSuccessful</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -212,20 +228,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testRegisterUserApiStatusCode')
-data.setCell(0, 2, 'com.test.restassured.framwork.AppTest')
-data.setCell(0, 3, 2397);
+data.setCell(0, 1, 'testFetchUsers')
+data.setCell(0, 2, 'com.test.restassured.framwork.LoginTest')
+data.setCell(0, 3, 5191);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testRegisterUserApiContainsToke')
-data.setCell(1, 2, 'com.test.restassured.framwork.AppTest')
-data.setCell(1, 3, 1697);
+data.setCell(1, 1, 'testHasItems')
+data.setCell(1, 2, 'com.test.restassured.framwork.LoginTest')
+data.setCell(1, 3, 2407);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testLoginSuccessful')
+data.setCell(2, 2, 'com.test.restassured.framwork.LoginTest')
+data.setCell(2, 3, 1445);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -240,16 +260,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.test.restassured.framwork.AppTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">testRegisterUserApiResponseJsonSchemaValidation</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -258,22 +271,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.restassured.framwork.AppTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.test.restassured.framwork.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">setUpBeforeTest</span>
-                <span class="method-start">371 ms</span>
+                <span class="method-start">517 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">testRegisterUserApiStatusCode</span>
-                <span class="method-start">378 ms</span>
+                <span class="method-name">testFetchUsers</span>
+                <span class="method-start">527 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testRegisterUserApiContainsToke</span>
-                <span class="method-start">2780 ms</span>
+                <span class="method-name">testHasItems</span>
+                <span class="method-start">5721 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLoginSuccessful</span>
+                <span class="method-start">8133 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

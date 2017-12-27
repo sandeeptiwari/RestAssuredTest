@@ -76,12 +76,19 @@ public class AppTest
 	}
 	
 	@Test(priority = 2, groups= {"register"})
-	public void testRegisterUserApiContainsToke() {
-		String responseString  = given().contentType("application/json").body(registerRequestJson).when()
+	public void testRegisterUserApiContainsToken() {
+		/*String responseString  = given().contentType("application/json").body(registerRequestJson).when()
 		.post("/register").asString();
 		
 		JsonPath jsonPath = new JsonPath(responseString);
 		String token = jsonPath.get("token");
+		Assert.assertNotNull(token);*/
+		
+		//extracting the "token"
+		
+		String token = given().contentType("application/json").body(registerRequestJson)
+				       .when().post("/register").then().statusCode(201).extract()
+				       .path("token");
 		Assert.assertNotNull(token);
 	}
 	

@@ -4,16 +4,17 @@
   <test name="Test(failed)">
     <groups>
       <run>
-        <include name="register"/>
+        <include name="login"/>
       </run>
     </groups>
     <classes>
-      <class name="com.test.restassured.framwork.AppTest">
+      <class name="com.test.restassured.framwork.LoginTest">
         <methods>
-          <include name="testRegisterUserApiContainsToke"/>
-          <include name="testRegisterUserApiStatusCode"/>
+          <include name="testHasItems"/>
+          <include name="setUpBeforeTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.test.restassured.framwork.AppTest -->
+      </class> <!-- com.test.restassured.framwork.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
